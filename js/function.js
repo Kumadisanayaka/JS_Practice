@@ -351,10 +351,32 @@
 
 // console.log(total);
 
-let numbers = [12, 45, 7, 89, 34, 56];
+// let numbers = [12, 45, 7, 89, 34, 56];
 
-let maximum = numbers.reduce((max,number)=> { return number > max ? number : max;},numbers[0] );
+// let maximum = numbers.reduce((max,number)=> { return number > max ? number : max;},numbers[0] );
 
-console.log(maximum);
+// console.log(maximum);
 
+// let numbers = [5, 12, 18, 25, 30];
 
+// let twentyThanNumber = numbers.find(number => number > 20 )
+
+// console.log(twentyThanNumber);
+
+// let numbers = [2, 4, 6, 8];
+
+// let result = numbers.some(number => number > 10)
+
+// console.log(result);
+
+// let numbers = [10, 20, 30, 40];
+
+// let result = numbers.every(number => number % 5 === 0)
+
+// console.log(result);
+
+// let numbers = [45, 12, 89, 7, 34, 56];
+
+// numbers.sort((a,b)=> b-a)
+
+// console.log(numbers);
