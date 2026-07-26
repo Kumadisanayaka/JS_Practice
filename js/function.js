@@ -187,36 +187,55 @@
 // }
 
 
-let secretNumber = Math.floor(Math.random()*10)+1;
-let attempts = 0;
+// let secretNumber = Math.floor(Math.random()*10)+1;
+// let attempts = 0;
 
-function submitBtnOnAction(){
-
-
-    let guessNumber = Number(document.getElementById("guess-number").value);
-    let displayMsg = document.querySelector(".display-msg");
-    let guessbtn = document.querySelector(".submitbtn");
-
-    attempts++;
-
-    if(guessNumber === secretNumber){
-        displayMsg.textContent = "Congratulations! You guessed correctly.";
-
-        guessbtn.disabled = true;
-    }else if(guessNumber < secretNumber){
-        displayMsg.textContent = "Too Low!";
-    }else{
-        displayMsg.textContent = "Too High!";
-    }
-
-    if(attempts === 3 && guessNumber !== secretNumber){
-        displayMsg.textContent = "Your attempts over!";
-        guessbtn.disabled = true;
-    }
-
-}
+// function submitBtnOnAction(){
 
 
+//     let guessNumber = Number(document.getElementById("guess-number").value);
+//     let displayMsg = document.querySelector(".display-msg");
+//     let guessbtn = document.querySelector(".submitbtn");
 
+//     attempts++;
 
+//     if(guessNumber === secretNumber){
+//         displayMsg.textContent = "Congratulations! You guessed correctly.";
+
+//         guessbtn.disabled = true;
+//     }else if(guessNumber < secretNumber){
+//         displayMsg.textContent = "Too Low!";
+//     }else{
+//         displayMsg.textContent = "Too High!";
+//     }
+
+//     if(attempts === 3 && guessNumber !== secretNumber){
+//         displayMsg.textContent = "Your attempts over!";
+//         guessbtn.disabled = true;
+//     }
+
+// }
+
+// function sayhello() {
+//     console.log("Hello Javascript!");
+    
+// }
+
+// sayhello();
+// sayhello();
+// sayhello();
+
+// function greetUser(name){
+//     console.log("Hello, "+name);    
+// }
+
+// greetUser("Pathum");
+// greetUser("Kasun");
+
+// function introduceUser(name, age){
+//     console.log(`My name is ${name} and I am ${age} years old`);
+    
+// }
+
+// introduceUser("pathum",25);
 
