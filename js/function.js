@@ -339,10 +339,22 @@
 
 // console.log(`Even number count : ${count}`);
 
-let numbers = [11, 20, 33, 40, 55, 60, 72];
+// let numbers = [11, 20, 33, 40, 55, 60, 72];
 
-let evenNumbers  = numbers.filter(number => number % 2 === 0);
+// let evenNumbers  = numbers.filter(number => number % 2 === 0);
 
-console.log(evenNumbers);
+// console.log(evenNumbers);
+
+// let numbers = [10, 20, 30, 40];
+
+// let total = numbers.reduce((Sum, number) => Sum + number, 0);
+
+// console.log(total);
+
+let numbers = [12, 45, 7, 89, 34, 56];
+
+let maximum = numbers.reduce((max,number)=> { return number > max ? number : max;},numbers[0] );
+
+console.log(maximum);
 
 
