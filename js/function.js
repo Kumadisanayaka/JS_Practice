@@ -93,17 +93,23 @@
 
 // console.log("Total : "+total);
 
-let age = 21;
-let hasLicense = true;
+// let age = 21;
+// let hasLicense = true;
 
-let isCanDrive = age >= 18 && hasLicense === true;
+// let isCanDrive = age >= 18 && hasLicense === true;
 
-let isAdult = age >= 18;
+// let isAdult = age >= 18;
 
-console.log(isCanDrive);
-console.log(isAdult);
+// console.log(isCanDrive);
+// console.log(isAdult);
 
-
+console.log(10 + 5);
+console.log("10" + 5);
+console.log("10" - 5);
+console.log(5 == "5");
+console.log(5 === "5");
+console.log(true == 1);
+console.log(true === 1);
 
 
 
