@@ -486,3 +486,105 @@
 
 //             console.log(total);
             
+// let products = [
+//     { name: "Laptop", price: 1000, quantity: 1 },
+//     { name: "Mouse", price: 50, quantity: 2 },
+//     { name: "Keyboard", price: 100, quantity: 1 },
+//     { name: "Monitor", price: 300, quantity: 2 }
+// ];
+
+// let finaltotal = products.filter(product => product.price > 100)
+//             .map(product => product.price * product.quantity)
+//             .reduce((total,price)=>total + price,0)
+
+// console.log(finaltotal);
+
+// let car = {
+//     brand: "Toyota",
+//     model: "Corolla",
+//     year: 2022
+// };
+
+// let {brand,model,year} = car;
+
+// console.log(brand);
+// console.log(model);
+// console.log(year);
+
+// let colors = ["Red", "Green", "Blue"];
+
+// let [first, second, third] = colors;
+
+// console.log(first);
+// console.log(second);
+// console.log(third);
+
+// let numbers1 = [1, 2, 3];
+// let numbers2 = [4, 5, 6];
+
+// let allNumbers = [...numbers1, ...numbers2];
+
+// console.log(allNumbers);
+
+// let fruits1 = ["Apple", "Mango"];
+// let fruits2 = ["Banana", "Orange"];
+
+// let allFruites = [...fruits1,...fruits2]
+
+// console.log(allFruites);
+
+// let product = {
+//     name: "Laptop",
+//     price: 1000,
+//     category: "Electronics"
+// };
+
+// let UpdateProduct = {
+//     ...product,
+//     price : 1200
+// };
+
+// console.log(UpdateProduct);
+
+// let user = {
+//     name: "Pathum",
+//     age: 25
+// };
+
+// let address = {
+//     city: "Kandy",
+//     country: "Sri Lanka"
+// };
+
+// let userDetails = {
+//     ...user,
+//     ...address
+// };
+
+// console.log(userDetails);
+
+// function addNumbers(...numbers) {
+//     console.log(numbers);
+// }
+
+// addNumbers(10, 20, 30, 40);
+
+// function calculateTotal(...prices) {
+//   let total = prices.reduce((total,price)=> total + price)
+//   return total;
+// }
+
+// console.log(calculateTotal(100, 200, 50));
+
+let user = {
+    name: "Kumara",
+    age: 25,
+    city: "Kandy",
+    country: "Sri Lanka"
+};
+
+let {name, ...otherDetails} = user;
+
+console.log(name);
+console.log(otherDetails);
+
