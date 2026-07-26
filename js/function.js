@@ -247,6 +247,38 @@
 
 // console.log(`Result : ${result}`);
 
+// function checkEvenOrOdd(number) {
+//     return number % 2 === 0 ? "Even" : "Odd";
+// }
+
+// let result = checkEvenOrOdd(6)
+
+// console.log(`Result : ${result}`);
+
+// function createProduct(name,price) {
+//     return{
+//         name : name,
+//         price : price
+//     }
+// }
+
+// let user = createProduct("Laptop",125000.00);
+
+// console.log(user);
+
+// console.log(user.name);
+// console.log(user.price);
+
+
+// function calculatePrice(price, quantity = 1) {
+//     return quantity * price;
+// }
+
+// let total = calculatePrice(100,3);
+
+// console.log(`Total : ${total}`);
+
+
 
 
 
