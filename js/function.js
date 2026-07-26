@@ -164,14 +164,27 @@
 //     console.log(i);
 // }
 
-let total = 0;
+// let total = 0;
 
-for (let i = 0; i<=10; i++) {
-    total = total + i;
+// for (let i = 0; i<=10; i++) {
+//     total = total + i;
+// }
+
+// console.log("Total : "+total);
+
+// let number = 5;
+
+// for(let i = 0; i <= 10; i++){
+//     console.log(`${number} x ${i} = ${number * i}`);
+    
+// }
+
+let i = 10;
+
+while (i >= 0) {
+    console.log(i);
+    i--;
 }
-
-console.log("Total : "+total);
-
 
 
 
