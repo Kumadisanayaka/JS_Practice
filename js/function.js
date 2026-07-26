@@ -278,7 +278,21 @@
 
 // console.log(`Total : ${total}`);
 
+// const calculateDiscount = function(price, discount){
+//     let discountPrice = (discount / 100) *  price;
 
+//     return price - discountPrice;
+// }
+
+// let discountedPrice = calculateDiscount(100,20);
+
+// console.log(`Discounted Price : ${discountedPrice}`);
+
+const calculateTotal = (price,qty) => price * qty;
+
+let total = calculateTotal(100,3);
+
+console.log(`Total : ${total}`);
 
 
 
