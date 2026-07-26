@@ -288,11 +288,18 @@
 
 // console.log(`Discounted Price : ${discountedPrice}`);
 
-const calculateTotal = (price,qty) => price * qty;
+// const calculateTotal = (price,qty) => price * qty;
 
-let total = calculateTotal(100,3);
+// let total = calculateTotal(100,3);
 
-console.log(`Total : ${total}`);
+// console.log(`Total : ${total}`);
+
+// const checkAge = age => age >= 21 ? "Adult" : "Not Adult";
+
+// let result = checkAge(10);
+
+// console.log(`Result : ${result}`);
+
 
 
 
