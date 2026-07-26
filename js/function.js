@@ -302,14 +302,22 @@
 
 //Array using
 
-let fruits = ["Apple","Mango","Banana"];
+// let fruits = ["Apple","Mango","Banana"];
 
-console.log(fruits);
-console.log(fruits[0]);
-console.log(fruits[1]);
-console.log(fruits[2]);
+// console.log(fruits);
+// console.log(fruits[0]);
+// console.log(fruits[1]);
+// console.log(fruits[2]);
 
-console.log(fruits.length);
+// console.log(fruits.length);
+
+let students = ["Kumara", "Kasun", "Pathum", "Nimal"];
+students.push("kavindu")
+students.unshift("Chamindu")
+students.shift()
+students.pop()
+console.log(students);
+console.log(`No of student : ${students.length}`);
 
 
 
