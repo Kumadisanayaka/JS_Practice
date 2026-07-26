@@ -239,3 +239,16 @@
 
 // introduceUser("pathum",25);
 
+// function multiplyNumbers(a,b) {
+//     return a * b;
+// }
+
+// let result = multiplyNumbers(5,6)
+
+// console.log(`Result : ${result}`);
+
+
+
+
+
+
