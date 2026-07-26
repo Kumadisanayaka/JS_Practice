@@ -380,3 +380,36 @@
 // numbers.sort((a,b)=> b-a)
 
 // console.log(numbers);
+
+//object practice
+
+// let car = {
+//     brand : "Toyota",
+//     model : "Corolla",
+//     year : 2022
+// }
+
+// console.log(car.brand);
+// console.log(car.model);
+// console.log(car.year);
+
+let student = {
+    name: "Pathum",
+    age: 25,
+    course: "JavaScript",
+    city : "Kandy"
+};
+
+student.age = 26
+
+delete student.course
+
+console.log(student.name);
+console.log(student.age);
+console.log(student.course);
+console.log(student.city);
+
+
+
+
+
