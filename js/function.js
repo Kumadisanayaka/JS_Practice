@@ -393,23 +393,96 @@
 // console.log(car.model);
 // console.log(car.year);
 
-let student = {
-    name: "Pathum",
-    age: 25,
-    course: "JavaScript",
-    city : "Kandy"
-};
+// let student = {
+//     name: "Pathum",
+//     age: 25,
+//     course: "JavaScript",
+//     city : "Kandy"
+// };
 
-student.age = 26
+// student.age = 26
 
-delete student.course
+// delete student.course
 
-console.log(student.name);
-console.log(student.age);
-console.log(student.course);
-console.log(student.city);
-
-
+// console.log(student.name);
+// console.log(student.age);
+// console.log(student.course);
+// console.log(student.city);
 
 
+// let car = {
+//     brand : "Toyota",
+//     model : "Corolla",
 
+//     showDetails : function(){
+//         console.log(`Brand : ${this.brand}`);
+//         console.log(`Model : ${this.model}`);
+//     }
+// }
+
+// car.showDetails()
+
+// let person = {
+//     name: "Pathum",
+//     age: 25,
+
+//     introduce() {
+//        console.log(`My name is ${this.name} and I am ${this.age} years old.`);
+       
+//     }
+// };
+
+// person.introduce()
+
+// let students = [
+//     {
+//         name: "Pathum",
+//         age: 25,
+//         course: "JavaScript"
+//     },
+//     {
+//         name: "Kasun",
+//         age: 22,
+//         course: "Java"
+//     },
+//     {
+//         name: "Nimal",
+//         age: 24,
+//         course: "Python"
+//     }
+// ];
+
+// for(let i = 0; i < students.length; i++){
+//     console.log(`${students[i].name}`);
+    
+// }
+
+// let studentCourseUpdate = students.find(student => student.name === "Kasun")
+
+// studentCourseUpdate.course = "JavaScript"
+
+// console.log(studentCourseUpdate);
+
+// let products = [
+//     { name: "Laptop", price: 1000 },
+//     { name: "Mouse", price: 50 },
+//     { name: "Keyboard", price: 100 }
+// ];
+
+// let total = products.reduce((total,product) => total = total + product.price,0 );
+
+
+// console.log(`Total : ${total}`);
+
+// let products = [
+//     { name: "Laptop", price: 1000, inStock: true },
+//     { name: "Mouse", price: 50, inStock: true },
+//     { name: "Keyboard", price: 100, inStock: false },
+//     { name: "Monitor", price: 300, inStock: true }
+// ];
+
+// let total = products.filter(product => product.price > 100)
+//             .reduce((total,product)=> total = total + product.price,0 )
+
+//             console.log(total);
+            
