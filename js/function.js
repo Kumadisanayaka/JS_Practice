@@ -103,13 +103,34 @@
 // console.log(isCanDrive);
 // console.log(isAdult);
 
-console.log(10 + 5);
-console.log("10" + 5);
-console.log("10" - 5);
-console.log(5 == "5");
-console.log(5 === "5");
-console.log(true == 1);
-console.log(true === 1);
+// console.log(10 + 5);
+// console.log("10" + 5);
+// console.log("10" - 5);
+// console.log(5 == "5");
+// console.log(5 === "5");
+// console.log(true == 1);
+// console.log(true === 1);
+
+//Control Flow
+
+// let marks = 82;
+
+// if(marks >= 75){
+//     console.log("A");
+// }else if(marks >= 65){
+//     console.log("B");
+// }else if(marks >= 55){
+//     console.log("C");
+// }else if(marks >= 35){
+//     console.log("S");
+// }else{
+//     console.log("Fail");
+// }
+
+let number = 10;
+
+console.log(number <= 0 ? "Negative" : "Positive");
+
 
 
 
