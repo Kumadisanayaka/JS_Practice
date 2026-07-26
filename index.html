@@ -4,31 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="/js/function.js"></script>
     <title>Java Practice</title>
 </head>
 <body>
     <div class="container">
-        <h1>Customer Manager</h1>
-        <input type="text" placeholder="Enter customer name" id="txtcustomerName"><br>
-        <input type="text" placeholder="Enter Address" id="txtAddress"><br>
-        <input type="text" placeholder="Enter Age" id="txtAge"><br>
-        <input type="text" placeholder="Enter Email" id="txtEmail"><br>
-        <input type="text" placeholder="Enter salary" id="txtSalary"><br>
-        <input type="button" value="Add Customer" onclick="addCustomerOnAction()">
+        <h1>Guess Number Game</h1>
+        <input type="number" id="guess-number" placeholder="Input 1 - 10 number">
+        <h2 class="display-msg"></h2>
+        <button type="submit" class="submitbtn" onclick="submitBtnOnAction()">GUESS</button>
     </div>
-    <div class="container">
-        <h1>Customer List</h1>
-    <table id="tblCustomer">
-        <tr>
-            <td>Name</td>
-            <td>Address</td>
-            <td>Age</td>
-            <td>Email</td>
-            <td>Salary</td>
-        </tr>
-    </table>
-    <button onclick="loadCustomersOnAction()">Load Customers</button>
-    </div>
+    <script src="/js/function.js"></script>
 </body>
 </html>

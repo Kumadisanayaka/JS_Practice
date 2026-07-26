@@ -179,13 +179,42 @@
     
 // }
 
-let i = 10;
+// let i = 10;
 
-while (i >= 0) {
-    console.log(i);
-    i--;
+// while (i >= 0) {
+//     console.log(i);
+//     i--;
+// }
+
+
+let secretNumber = Math.floor(Math.random()*10)+1;
+let attempts = 0;
+
+function submitBtnOnAction(){
+
+
+    let guessNumber = Number(document.getElementById("guess-number").value);
+    let displayMsg = document.querySelector(".display-msg");
+    let guessbtn = document.querySelector(".submitbtn");
+
+    attempts++;
+
+    if(guessNumber === secretNumber){
+        displayMsg.textContent = "Congratulations! You guessed correctly.";
+
+        guessbtn.disabled = true;
+    }else if(guessNumber < secretNumber){
+        displayMsg.textContent = "Too Low!";
+    }else{
+        displayMsg.textContent = "Too High!";
+    }
+
+    if(attempts === 3 && guessNumber !== secretNumber){
+        displayMsg.textContent = "Your attempts over!";
+        guessbtn.disabled = true;
+    }
+
 }
-
 
 
 
