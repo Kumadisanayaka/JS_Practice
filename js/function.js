@@ -127,14 +127,42 @@
 //     console.log("Fail");
 // }
 
-let number = 10;
+// let number = 10;
 
-console.log(number <= 0 ? "Negative" : "Positive");
+// console.log(number <= 0 ? "Negative" : "Positive");
+
+// let role = "admin";
+
+// switch (role) {
+//     case "admin":
+//         console.log("Full access");
+//         break;
+//     case "user":
+//         console.log("Limited access");
+//         break;
+//     case "guest":
+//         console.log("Guest access");
+//         break;
+//     default:
+//         console.log("Invalid role");
+//         break;
+// }
 
 
+// let username = "admin";
+// let password = "1234";
 
+// if(username === "admin" && password === "1234"){
+//     console.log("Login successful");
+// }else if(password !== "1234"){
+//     console.log("Incorrect password");
+// }else{
+//     console.log("User not found");
+// }
 
-
+for(let i = 1; i <= 10; i++){
+    console.log(i);
+}
 
 
 
