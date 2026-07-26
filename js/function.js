@@ -311,18 +311,38 @@
 
 // console.log(fruits.length);
 
-let students = ["Kumara", "Kasun", "Pathum", "Nimal"];
-students.push("kavindu")
-students.unshift("Chamindu")
-students.shift()
-students.pop()
-console.log(students);
-console.log(`No of student : ${students.length}`);
+// let students = ["Kumara", "Kasun", "Pathum", "Nimal"];
 
+// for (let student of students) {
+//     console.log(student);   
+// }
 
+// let numbers = [10,20,30,40,50,60]
+// let total = 0;
+// for (let number of numbers) {
+//     total = total + number;
+// }
 
+// console.log(`Total : ${total}`);
 
+// let numbers = [10, 15, 22, 31, 40, 55, 60];
+// let count = 0;
 
+// for(let number of numbers){
+//     if (
+//         number % 2 === 0  
+//     ) {
+//         count++;
+        
+//     }
+// }
 
+// console.log(`Even number count : ${count}`);
+
+let numbers = [11, 20, 33, 40, 55, 60, 72];
+
+let evenNumbers  = numbers.filter(number => number % 2 === 0);
+
+console.log(evenNumbers);
 
 
