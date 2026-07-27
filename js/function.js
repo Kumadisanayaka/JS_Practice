@@ -596,14 +596,19 @@
 
 // newMessage.innerHTML = "<strong>Welcome to JavaScript</strong>";
 
-let title = document.getElementById("title");
+// let title = document.getElementById("title");
 
-title.classList.add("highlight");
+// title.classList.add("highlight");
 
-title.classList.remove("highlight");
+// title.classList.remove("highlight");
 
-console.log();
+// console.log();
 
+let changebtn = document.getElementById("changebtn");
+
+changebtn.addEventListener("click",function(){
+    changebtn.classList.toggle("highlight");
+});
 
 
 
