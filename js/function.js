@@ -594,5 +594,5 @@ title.textContent = "Hello JavaScript"
 
 let newMessage = document.getElementById("message")
 
-newMessage.textContent = "Welcome to JavaScript DOM"
+newMessage.innerHTML = "<strong>Welcome to JavaScript</strong>";
 
