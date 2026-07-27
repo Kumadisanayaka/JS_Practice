@@ -623,12 +623,19 @@
     
 // })
 
-let nameInput = document.getElementById("nameInput");
+// let nameInput = document.getElementById("nameInput");
+// let result = document.getElementById("result");
+// let showbtn = document.getElementById("showName");
+
+// nameInput.addEventListener("input",function(){
+//     result.textContent = nameInput.value;
+// });
+
+let number1 = document.getElementById("number1");
+let number2 = document.getElementById("number2");
 let result = document.getElementById("result");
-let showbtn = document.getElementById("showName");
+let addbtn = document.getElementById("addbtn");
 
-nameInput.addEventListener("input",function(){
-    result.textContent = nameInput.value;
+addbtn.addEventListener("click",function(){
+    result.textContent = Number(number1.value) + Number(number2.value)
 });
-
-
