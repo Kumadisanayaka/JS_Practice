@@ -652,8 +652,13 @@ multiplybtn.addEventListener("click",function(){
     result.textContent = Number(number1.value) * Number(number2.value)
 });
 
-dividebtn.addEventListener("click",function(){
-    result.textContent = Number(number1.value) / Number(number2.value)
+dividebtn.addEventListener("click", function () {
+    if (Number(number2.value) === 0) {
+        result.textContent = "Cannot divide by zero";
+    } else {
+        result.textContent =
+            Number(number1.value) / Number(number2.value);
+    }
 });
 
 
