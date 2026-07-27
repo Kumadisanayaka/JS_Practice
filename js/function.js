@@ -615,12 +615,20 @@
 // mybtn.addEventListener("click",function(){
 //     console.log("Button Clicked!")
 // });
-let title = document.getElementById("title");
-let greetbtn = document.getElementById("greetbtn");
+// let title = document.getElementById("title");
+// let greetbtn = document.getElementById("greetbtn");
 
-greetbtn.addEventListener("click",function(){
-    title.textContent = "Hello JavaScript!";
+// greetbtn.addEventListener("click",function(){
+//     title.textContent = "Hello JavaScript!";
     
-})
+// })
+
+let nameInput = document.getElementById("nameInput");
+let result = document.getElementById("result");
+let showbtn = document.getElementById("showName");
+
+nameInput.addEventListener("input",function(){
+    result.textContent = nameInput.value;
+});
 
 
