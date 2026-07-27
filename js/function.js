@@ -576,15 +576,23 @@
 
 // console.log(calculateTotal(100, 200, 50));
 
-let user = {
-    name: "Kumara",
-    age: 25,
-    city: "Kandy",
-    country: "Sri Lanka"
-};
+// let user = {
+//     name: "Kumara",
+//     age: 25,
+//     city: "Kandy",
+//     country: "Sri Lanka"
+// };
 
-let {name, ...otherDetails} = user;
+// let {name, ...otherDetails} = user;
 
-console.log(name);
-console.log(otherDetails);
+// console.log(name);
+// console.log(otherDetails);
+
+let title = document.getElementById("title")
+
+title.textContent = "Hello JavaScript"
+
+let newMessage = document.getElementById("message")
+
+newMessage.textContent = "Welcome to JavaScript DOM"
 
