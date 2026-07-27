@@ -604,12 +604,23 @@
 
 // console.log();
 
-let changebtn = document.getElementById("changebtn");
+// let changebtn = document.getElementById("changebtn");
 
-changebtn.addEventListener("click",function(){
-    changebtn.classList.toggle("highlight");
-});
+// changebtn.addEventListener("click",function(){
+//     changebtn.classList.toggle("highlight");
+// });
 
+// let mybtn = document.getElementById("mybtn");
 
+// mybtn.addEventListener("click",function(){
+//     console.log("Button Clicked!")
+// });
+let title = document.getElementById("title");
+let greetbtn = document.getElementById("greetbtn");
+
+greetbtn.addEventListener("click",function(){
+    title.textContent = "Hello JavaScript!";
+    
+})
 
 
