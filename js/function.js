@@ -588,11 +588,23 @@
 // console.log(name);
 // console.log(otherDetails);
 
-let title = document.getElementById("title")
+// let title = document.getElementById("title")
 
-title.textContent = "Hello JavaScript"
+// title.textContent = "Hello JavaScript"
 
-let newMessage = document.getElementById("message")
+// let newMessage = document.getElementById("message")
 
-newMessage.innerHTML = "<strong>Welcome to JavaScript</strong>";
+// newMessage.innerHTML = "<strong>Welcome to JavaScript</strong>";
+
+let title = document.getElementById("title");
+
+title.classList.add("highlight");
+
+title.classList.remove("highlight");
+
+console.log();
+
+
+
+
 
