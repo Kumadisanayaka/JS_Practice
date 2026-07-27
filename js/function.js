@@ -720,35 +720,80 @@
 //     })
 // })
 
-let container = document.getElementById("container");
+// let container = document.getElementById("container");
 
-let newElement = document.createElement("p");
+// let newElement = document.createElement("p");
 
-let newbtn = document.createElement("button");
+// let newbtn = document.createElement("button");
 
-let newCard = document.createElement("div");
+// let newCard = document.createElement("div");
 
-let removeCard = document.createElement("button");
+// let removeCard = document.createElement("button");
 
-newCard.classList.add("card");
+// newCard.classList.add("card");
 
-newbtn.textContent = "New Button"
+// newbtn.textContent = "New Button"
 
-removeCard.textContent = "Remove Card";
+// removeCard.textContent = "Remove Card";
 
-newElement.textContent = "Hello, I was created with JavaScript!";
+// newElement.textContent = "Hello, I was created with JavaScript!";
 
-newCard.textContent = "Dynamic card"
-container.append(newCard);
-container.append(newElement);
-container.append(newbtn);
-container.append(removeCard);
+// newCard.textContent = "Dynamic card"
+// container.append(newCard);
+// container.append(newElement);
+// container.append(newbtn);
+// container.append(removeCard);
 
 
-newbtn.addEventListener("click", function () {
-    console.log("New Button Clicked!");
+// newbtn.addEventListener("click", function () {
+//     console.log("New Button Clicked!");
+// });
+
+// removeCard.addEventListener("click",function(){
+//     newCard.remove();
+// })
+
+let inputTask = document.getElementById("inputTask");
+let addTask = document.getElementById("addTask");
+let taskList = document.getElementById("taskList");
+let message = document.getElementById("message");
+let taskForm = document.getElementById("taskForm");
+
+taskForm.addEventListener("submit",function(event){
+    if(hasEmptyInput()){
+        message.textContent = "please Enter a task"
+        return;
+    }
+
+    let task = document.createElement("li");
+
+    task.textContent = inputTask.value;
+
+    task.addEventListener("click",function(){
+        task.classList.toggle("completed");
+    })
+
+    let deletebtn = document.createElement("button");
+
+    deletebtn.textContent = "Delete";
+
+    taskList.append(task);
+    task.append(deletebtn);
+    inputTask.value = "";
+
+    deletebtn.addEventListener("click",function(){
+    event.stopPropagation();
+    task.remove();
+    
+    });
+
+    event.preventDefault();
+    console.log("Form submit successful!");
+    
+
 });
 
-removeCard.addEventListener("click",function(){
-    newCard.remove();
-})
+function hasEmptyInput(){
+    return inputTask.value === "";
+}
+

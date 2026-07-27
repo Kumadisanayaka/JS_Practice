@@ -8,3 +8,8 @@
     margin: 20px;
     background-color: aquamarine;
 }
+
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
