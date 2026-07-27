@@ -641,24 +641,43 @@ let multiplybtn = document.getElementById("multiplybtn");
 let dividebtn = document.getElementById("dividebtn");
 
 addbtn.addEventListener("click",function(){
+    if(hasEmptyInput()){
+        result.textContent = "Pleace enter both numbers"
+    }else{
     result.textContent = Number(number1.value) + Number(number2.value)
-});
-
-subtractbtn.addEventListener("click",function() {
-    result.textContent = Number(number1.value) - Number(number2.value)
-});
-
-multiplybtn.addEventListener("click",function(){
-    result.textContent = Number(number1.value) * Number(number2.value)
-});
-
-dividebtn.addEventListener("click", function () {
-    if (Number(number2.value) === 0) {
-        result.textContent = "Cannot divide by zero";
-    } else {
-        result.textContent =
-            Number(number1.value) / Number(number2.value);
     }
 });
 
+subtractbtn.addEventListener("click",function() {
+    if(hasEmptyInput()){
+        result.textContent = "Pleace enter both numbers"
+    }else{
+    result.textContent = Number(number1.value) - Number(number2.value)
+    }
+});
+
+multiplybtn.addEventListener("click",function(){
+    if(hasEmptyInput()){
+        result.textContent = "Pleace enter both numbers"
+    }else{
+    result.textContent = Number(number1.value) * Number(number2.value)
+    }
+});
+
+dividebtn.addEventListener("click", function () {
+    if(hasEmptyInput()){
+        result.textContent = "Pleace enter both numbers"
+    }else{
+        if (Number(number2.value) === 0) {
+            result.textContent = "Cannot divide by zero";
+        } else {
+            result.textContent =
+                Number(number1.value) / Number(number2.value);
+        }
+    }
+});
+
+function hasEmptyInput() {
+    return number1.value === "" || number2.value === "";
+}
 
