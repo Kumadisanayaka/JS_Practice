@@ -640,41 +640,44 @@ let subtractbtn = document.getElementById("subtractbtn");
 let multiplybtn = document.getElementById("multiplybtn");
 let dividebtn = document.getElementById("dividebtn");
 
-addbtn.addEventListener("click",function(){
+function calculate(operation) {
     if(hasEmptyInput()){
-        result.textContent = "Pleace enter both numbers"
-    }else{
-    result.textContent = Number(number1.value) + Number(number2.value)
+        result.textContent = "Please enter both number"
+        return;
     }
+
+    let num1 = Number(number1.value);
+    let num2 = Number(number2.value);
+
+    if(operation==="add"){
+        result.textContent = num1 + num2;
+    }else if(operation==="subtract"){
+        result.textContent = num1 - num2;
+    }else if(operation==="multiply"){
+        result.textContent = num1 * num2;
+    }else if(operation==="divid"){
+        if(num2=== 0){
+            result.textContent = "cannot divide by zero"
+        }else{
+            result.textContent = num1 / num2;
+        }
+    }
+}
+
+addbtn.addEventListener("click",function(){
+    calculate("add");
 });
 
 subtractbtn.addEventListener("click",function() {
-    if(hasEmptyInput()){
-        result.textContent = "Pleace enter both numbers"
-    }else{
-    result.textContent = Number(number1.value) - Number(number2.value)
-    }
+   calculate("subtract");
 });
 
 multiplybtn.addEventListener("click",function(){
-    if(hasEmptyInput()){
-        result.textContent = "Pleace enter both numbers"
-    }else{
-    result.textContent = Number(number1.value) * Number(number2.value)
-    }
+  calculate("multiply");
 });
 
 dividebtn.addEventListener("click", function () {
-    if(hasEmptyInput()){
-        result.textContent = "Pleace enter both numbers"
-    }else{
-        if (Number(number2.value) === 0) {
-            result.textContent = "Cannot divide by zero";
-        } else {
-            result.textContent =
-                Number(number1.value) / Number(number2.value);
-        }
-    }
+ calculate("divid");
 });
 
 function hasEmptyInput() {
