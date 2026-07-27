@@ -3,3 +3,8 @@
     font-size: 60px;
 }
 
+.card{
+    padding: 20px;
+    margin: 20px;
+    background-color: aquamarine;
+}
