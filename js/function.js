@@ -726,13 +726,29 @@ let newElement = document.createElement("p");
 
 let newbtn = document.createElement("button");
 
+let newCard = document.createElement("div");
+
+let removeCard = document.createElement("button");
+
+newCard.classList.add("card");
+
 newbtn.textContent = "New Button"
+
+removeCard.textContent = "Remove Card";
 
 newElement.textContent = "Hello, I was created with JavaScript!";
 
+newCard.textContent = "Dynamic card"
+container.append(newCard);
 container.append(newElement);
 container.append(newbtn);
+container.append(removeCard);
+
 
 newbtn.addEventListener("click", function () {
     console.log("New Button Clicked!");
 });
+
+removeCard.addEventListener("click",function(){
+    newCard.remove();
+})
