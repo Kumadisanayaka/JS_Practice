@@ -631,56 +631,82 @@
 //     result.textContent = nameInput.value;
 // });
 
-let number1 = document.getElementById("number1");
-let number2 = document.getElementById("number2");
-let result = document.getElementById("result");
+// let number1 = document.getElementById("number1");
+// let number2 = document.getElementById("number2");
+// let result = document.getElementById("result");
 
-let addbtn = document.getElementById("addbtn");
-let subtractbtn = document.getElementById("subtractbtn");
-let multiplybtn = document.getElementById("multiplybtn");
-let dividebtn = document.getElementById("dividebtn");
+// let addbtn = document.getElementById("addbtn");
+// let subtractbtn = document.getElementById("subtractbtn");
+// let multiplybtn = document.getElementById("multiplybtn");
+// let dividebtn = document.getElementById("dividebtn");
 
-function calculate(operation) {
-    if(hasEmptyInput()){
-        result.textContent = "Please enter both number"
-        return;
-    }
+// function calculate(operation) {
+//     if(hasEmptyInput()){
+//         result.textContent = "Please enter both number"
+//         return;
+//     }
 
-    let num1 = Number(number1.value);
-    let num2 = Number(number2.value);
+//     let num1 = Number(number1.value);
+//     let num2 = Number(number2.value);
 
-    if(operation==="add"){
-        result.textContent = num1 + num2;
-    }else if(operation==="subtract"){
-        result.textContent = num1 - num2;
-    }else if(operation==="multiply"){
-        result.textContent = num1 * num2;
-    }else if(operation==="divid"){
-        if(num2=== 0){
-            result.textContent = "cannot divide by zero"
-        }else{
-            result.textContent = num1 / num2;
-        }
-    }
-}
+//     if(operation==="add"){
+//         result.textContent = num1 + num2;
+//     }else if(operation==="subtract"){
+//         result.textContent = num1 - num2;
+//     }else if(operation==="multiply"){
+//         result.textContent = num1 * num2;
+//     }else if(operation==="divid"){
+//         if(num2=== 0){
+//             result.textContent = "cannot divide by zero"
+//         }else{
+//             result.textContent = num1 / num2;
+//         }
+//     }
+// }
 
-addbtn.addEventListener("click",function(){
-    calculate("add");
+// addbtn.addEventListener("click",function(){
+//     calculate("add");
+// });
+
+// subtractbtn.addEventListener("click",function() {
+//    calculate("subtract");
+// });
+
+// multiplybtn.addEventListener("click",function(){
+//   calculate("multiply");
+// });
+
+// dividebtn.addEventListener("click", function () {
+//  calculate("divid");
+// });
+
+// function hasEmptyInput() {
+//     return number1.value === "" || number2.value === "";
+// }
+
+// let btn = document.getElementById("btn");
+
+// btn.addEventListener("click", function (event) {
+//     console.log(event.target);
+// });
+
+// let buttons = document.querySelectorAll(".colorBtn");
+// let result = document.getElementById("result");
+
+// buttons.forEach(function (button) {
+//     button.addEventListener("click", function (event) {
+//         result.textContent = event.target.textContent;
+//     });
+// });
+
+// let message = document.querySelector(".container p");
+
+// message.textContent = "Hello DOM"
+
+let newMessage = document.querySelector(".container h1");
+
+let clickMebtn = document.querySelector(".container button")
+
+clickMebtn.addEventListener("click",function(){
+    newMessage.textContent = "DOM Manipulation";
 });
-
-subtractbtn.addEventListener("click",function() {
-   calculate("subtract");
-});
-
-multiplybtn.addEventListener("click",function(){
-  calculate("multiply");
-});
-
-dividebtn.addEventListener("click", function () {
- calculate("divid");
-});
-
-function hasEmptyInput() {
-    return number1.value === "" || number2.value === "";
-}
-
