@@ -634,8 +634,26 @@
 let number1 = document.getElementById("number1");
 let number2 = document.getElementById("number2");
 let result = document.getElementById("result");
+
 let addbtn = document.getElementById("addbtn");
+let subtractbtn = document.getElementById("subtractbtn");
+let multiplybtn = document.getElementById("multiplybtn");
+let dividebtn = document.getElementById("dividebtn");
 
 addbtn.addEventListener("click",function(){
     result.textContent = Number(number1.value) + Number(number2.value)
 });
+
+subtractbtn.addEventListener("click",function() {
+    result.textContent = Number(number1.value) - Number(number2.value)
+});
+
+multiplybtn.addEventListener("click",function(){
+    result.textContent = Number(number1.value) * Number(number2.value)
+});
+
+dividebtn.addEventListener("click",function(){
+    result.textContent = Number(number1.value) / Number(number2.value)
+});
+
+
