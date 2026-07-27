@@ -703,10 +703,36 @@
 
 // message.textContent = "Hello DOM"
 
-let newMessage = document.querySelector(".container h1");
+// let newMessage = document.querySelector(".container h1");
 
-let clickMebtn = document.querySelector(".container button")
+// let clickMebtn = document.querySelector(".container button")
 
-clickMebtn.addEventListener("click",function(){
-    newMessage.textContent = "DOM Manipulation";
+// clickMebtn.addEventListener("click",function(){
+//     newMessage.textContent = "DOM Manipulation";
+// });
+
+// let buttons = document.querySelectorAll(".colorBtn");
+// let result = document.querySelector("#result")
+
+// buttons.forEach(function(button){
+//     button.addEventListener("click",function(event){
+//         result.textContent = event.target.textContent;
+//     })
+// })
+
+let container = document.getElementById("container");
+
+let newElement = document.createElement("p");
+
+let newbtn = document.createElement("button");
+
+newbtn.textContent = "New Button"
+
+newElement.textContent = "Hello, I was created with JavaScript!";
+
+container.append(newElement);
+container.append(newbtn);
+
+newbtn.addEventListener("click", function () {
+    console.log("New Button Clicked!");
 });
