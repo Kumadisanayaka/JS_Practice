@@ -827,9 +827,20 @@
 
 let username = document.getElementById("username");
 let message = document.getElementById("message");
+let charactors = document.getElementById("charactors");
+
+let maxLength = 10;
 
 username.addEventListener("input",function(){
     let value = username.value;
+
+    let count = value.length;
+
+    charactors.textContent = `charactors : ${count} / ${maxLength}`;
+
+    if(count > maxLength){
+        username.value = username.value.substring(0,maxLength);
+    }
 
     if(value.length===0){
         message.textContent = "username is required";
