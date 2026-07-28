@@ -854,28 +854,76 @@
 // });
 
 
+// let username = document.getElementById("username");
+// let email = document.getElementById("email");
+// let password = document.getElementById("password");
+
+// let submitBtn = document.getElementById("submitBtn");
+// let message = document.getElementById("message");
+
+// function formValidation(){
+//     let usernameValue = username.value;
+//     let emailValue = email.value;
+//     let passwordValue = password.value;
+
+//     if(usernameValue.length >= 3 && emailValue.includes("@") && passwordValue.length >=6 ){
+//         message.textContent = "Form is valid";
+//         submitBtn.disabled = false;
+//     }else{
+//         submitBtn.disabled = true;
+//         message.textContent = "Please complete the form";
+//     }
+// }
+
+// username.addEventListener("input",formValidation());
+// email.addEventListener("input",formValidation());
+// password.addEventListener("input",formValidation());
+
 let username = document.getElementById("username");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
 
+let usernameMessage = document.getElementById("usernameMessage");
+let emailMessage = document.getElementById("emailMessage");
+let passwordMessage = document.getElementById("passwordMessage");
+
 let submitBtn = document.getElementById("submitBtn");
-let message = document.getElementById("message");
 
-function formValidation(){
-    let usernameValue = username.value;
-    let emailValue = email.value;
-    let passwordValue = password.value;
-
-    if(usernameValue.length >= 3 && emailValue.includes("@") && passwordValue.length >=6 ){
-        message.textContent = "Form is valid";
-        submitBtn.disabled = false;
+function checkUsername() {
+    if (username.value.length < 3) {
+        usernameMessage.textContent = "Minimum 3 characters required";
+        return false;
     }else{
-        submitBtn.disabled = true;
-        message.textContent = "Please complete the form";
+        usernameMessage.textContent = "Username Valid";
+        return true;
     }
 }
 
-username.addEventListener("input",formValidation());
-email.addEventListener("input",formValidation());
-password.addEventListener("input",formValidation());
+function checkEmail() {
+    let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(pattern.test(email.value)){
+        emailMessage.textContent = "Email valid";
+        return true;
+    }else{
+        emailMessage.textContent = "Invalid Email"
+        return false;
+    }
+}
+
+function checkPassword(){
+    let pattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%]).{8,}$/;
+
+    if (pattern.test(password.value)) {
+        passwordMessage.textContent = "Strong password!";
+        return true;
+    }else{
+        passwordMessage.textContent = "Weak password!";
+        return false;
+    }
+}
+
+function formValidation() {
+    let usernameValid = checkUsername();
+}
 
