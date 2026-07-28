@@ -925,5 +925,17 @@ function checkPassword(){
 
 function formValidation() {
     let usernameValid = checkUsername();
+    let emailValid = checkEmail();
+    let passwordValid = checkPassword();
+
+    if(usernameValid && emailValid && passwordValid){
+        submitBtn.disabled = false;
+    }else{
+        submitBtn.disabled = true;
+    }
 }
+
+username.addEventListener("input",formValidation);
+email.addEventListener("input",formValidation);
+password.addEventListener("input",formValidation);
 
