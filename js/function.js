@@ -803,25 +803,42 @@
 // }
 
 
-let nameInput = document.getElementById("nameInput");
-let result = document.getElementById("result");
-let charactorCount = document.getElementById("charactorCount");
+// let nameInput = document.getElementById("nameInput");
+// let result = document.getElementById("result");
+// let charactorCount = document.getElementById("charactorCount");
 
-let maxLength = 10;
+// let maxLength = 10;
 
-nameInput.addEventListener("input", function(){
+// nameInput.addEventListener("input", function(){
 
-    let count = nameInput.value.length;
+//     let count = nameInput.value.length;
     
 
 
-    charactorCount.textContent = "charactors : " + count + "/" + " "+maxLength;
+//     charactorCount.textContent = "charactors : " + count + "/" + " "+maxLength;
 
-    if(count > maxLength){
-        nameInput.value = nameInput.value.substring(0,maxLength);
+//     if(count > maxLength){
+//         nameInput.value = nameInput.value.substring(0,maxLength);
+//     }
+
+//     result.textContent = nameInput.value;
+
+// });
+
+let username = document.getElementById("username");
+let message = document.getElementById("message");
+
+username.addEventListener("input",function(){
+    let value = username.value;
+
+    if(value.length===0){
+        message.textContent = "username is required";
+    }else if(value.length < 3){
+        message.textContent = "Username must have at least 3 characters";
+    }else if(value.length > 10){
+        message.textContent = "Username is too long";
+    }else{
+        message.textContent = "Username is valid"
     }
-
-    result.textContent = nameInput.value;
-
 });
 
