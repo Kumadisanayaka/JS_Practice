@@ -888,6 +888,7 @@ let emailMessage = document.getElementById("emailMessage");
 let passwordMessage = document.getElementById("passwordMessage");
 
 let submitBtn = document.getElementById("submitBtn");
+let result = document.getElementById("result");
 
 function checkUsername() {
     if (username.value.length < 3) {
@@ -938,4 +939,21 @@ function formValidation() {
 username.addEventListener("input",formValidation);
 email.addEventListener("input",formValidation);
 password.addEventListener("input",formValidation);
+
+let form = document.getElementById("registerForm");
+
+form.addEventListener("submit",function (event) {
+    event.preventDefault();
+
+    let userData = {
+        username: username.value,
+        email: email.value,
+        password: password.value
+    }
+
+    localStorage.setItem("user",JSON.stringify(userData))
+
+    result.textContent = "Registration Successful";
+    
+})
 

@@ -81,20 +81,22 @@
     </button>
 
     <p id="message"></p> -->
+    <form action="" id="registerForm">
+        <input type="text" id="username" placeholder="Username">
+        <p id="usernameMessage"></p>
 
-    <input type="text" id="username" placeholder="Username">
-    <p id="usernameMessage"></p>
+        <input type="email" id="email" placeholder="Email">
+        <p id="emailMessage"></p>
 
-    <input type="email" id="email" placeholder="Email">
-    <p id="emailMessage"></p>
+        <input type="password" id="password" placeholder="Password">
+        <p id="passwordMessage"></p>
 
-    <input type="password" id="password" placeholder="Password">
-    <p id="passwordMessage"></p>
+        <button id="submitBtn" disabled>
+            Register
+        </button>
+    </form>
 
-    <button id="submitBtn" disabled>
-        Register
-    </button>
-
+    <h3 id="result"></h3>
     <script src="/js/function.js"></script>
 </body>
 </html>
