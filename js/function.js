@@ -954,6 +954,16 @@ form.addEventListener("submit",function (event) {
     localStorage.setItem("user",JSON.stringify(userData))
 
     result.textContent = "Registration Successful";
+    form.reset();
     
 })
+
+let data = JSON.parse(localStorage.getItem("user"));
+
+if(data){
+    console.log(data.username);
+}
+else{
+    console.log("No user data found");
+}
 
