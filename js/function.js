@@ -825,31 +825,57 @@
 
 // });
 
+// let username = document.getElementById("username");
+// let message = document.getElementById("message");
+// let charactors = document.getElementById("charactors");
+
+// let maxLength = 10;
+
+// username.addEventListener("input",function(){
+//     let value = username.value;
+
+//     let count = value.length;
+
+//     charactors.textContent = `charactors : ${count} / ${maxLength}`;
+
+//     if(count > maxLength){
+//         username.value = username.value.substring(0,maxLength);
+//     }
+
+//     if(value.length===0){
+//         message.textContent = "username is required";
+//     }else if(value.length < 3){
+//         message.textContent = "Username must have at least 3 characters";
+//     }else if(value.length > 10){
+//         message.textContent = "Username is too long";
+//     }else{
+//         message.textContent = "Username is valid"
+//     }
+// });
+
+
 let username = document.getElementById("username");
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+
+let submitBtn = document.getElementById("submitBtn");
 let message = document.getElementById("message");
-let charactors = document.getElementById("charactors");
 
-let maxLength = 10;
+function formValidation(){
+    let usernameValue = username.value;
+    let emailValue = email.value;
+    let passwordValue = password.value;
 
-username.addEventListener("input",function(){
-    let value = username.value;
-
-    let count = value.length;
-
-    charactors.textContent = `charactors : ${count} / ${maxLength}`;
-
-    if(count > maxLength){
-        username.value = username.value.substring(0,maxLength);
-    }
-
-    if(value.length===0){
-        message.textContent = "username is required";
-    }else if(value.length < 3){
-        message.textContent = "Username must have at least 3 characters";
-    }else if(value.length > 10){
-        message.textContent = "Username is too long";
+    if(usernameValue.length >= 3 && emailValue.includes("@") && passwordValue.length >=6 ){
+        message.textContent = "Form is valid";
+        submitBtn.disabled = false;
     }else{
-        message.textContent = "Username is valid"
+        submitBtn.disabled = true;
+        message.textContent = "Please complete the form";
     }
-});
+}
+
+username.addEventListener("input",formValidation());
+email.addEventListener("input",formValidation());
+password.addEventListener("input",formValidation());
 
