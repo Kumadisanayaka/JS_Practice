@@ -754,6 +754,13 @@
 // })
 
 let inputTask = document.getElementById("inputTask");
+
+   inputTask.addEventListener("keydown",function(event){
+        if(event.key === "Enter"){
+            console.log("Welcome");
+        }
+    })
+
 let addTask = document.getElementById("addTask");
 let taskList = document.getElementById("taskList");
 let message = document.getElementById("message");
@@ -789,8 +796,6 @@ taskForm.addEventListener("submit",function(event){
 
     event.preventDefault();
     console.log("Form submit successful!");
-    
-
 });
 
 function hasEmptyInput(){
