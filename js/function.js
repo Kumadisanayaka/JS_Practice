@@ -805,7 +805,14 @@
 
 let nameInput = document.getElementById("nameInput");
 let result = document.getElementById("result");
+let charactorCount = document.getElementById("charactorCount");
 
-nameInput.addEventListener("keyup",function(){
+nameInput.addEventListener("input", function(){
+
+    let count = nameInput.value.length;
+
     result.textContent = nameInput.value;
+    charactorCount.textContent = "Count : " + count;
+
 });
+
