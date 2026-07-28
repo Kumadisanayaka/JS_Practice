@@ -807,12 +807,21 @@ let nameInput = document.getElementById("nameInput");
 let result = document.getElementById("result");
 let charactorCount = document.getElementById("charactorCount");
 
+let maxLength = 10;
+
 nameInput.addEventListener("input", function(){
 
     let count = nameInput.value.length;
+    
+
+
+    charactorCount.textContent = "charactors : " + count + "/" + " "+maxLength;
+
+    if(count > maxLength){
+        nameInput.value = nameInput.value.substring(0,maxLength);
+    }
 
     result.textContent = nameInput.value;
-    charactorCount.textContent = "Count : " + count;
 
 });
 
