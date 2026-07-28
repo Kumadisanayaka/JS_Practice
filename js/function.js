@@ -753,52 +753,59 @@
 //     newCard.remove();
 // })
 
-let inputTask = document.getElementById("inputTask");
+// To Do App project
+// let inputTask = document.getElementById("inputTask");
 
-   inputTask.addEventListener("keydown",function(event){
-        if(event.key === "Enter"){
-            console.log("Welcome");
-        }
-    })
+//    inputTask.addEventListener("keyup",function(){
+        
+//             console.log("key released");
+//     })
 
-let addTask = document.getElementById("addTask");
-let taskList = document.getElementById("taskList");
-let message = document.getElementById("message");
-let taskForm = document.getElementById("taskForm");
+// let addTask = document.getElementById("addTask");
+// let taskList = document.getElementById("taskList");
+// let message = document.getElementById("message");
+// let taskForm = document.getElementById("taskForm");
 
-taskForm.addEventListener("submit",function(event){
-    if(hasEmptyInput()){
-        message.textContent = "please Enter a task"
-        return;
-    }
+// taskForm.addEventListener("submit",function(event){
+//     if(hasEmptyInput()){
+//         message.textContent = "please Enter a task"
+//         return;
+//     }
 
-    let task = document.createElement("li");
+//     let task = document.createElement("li");
 
-    task.textContent = inputTask.value;
+//     task.textContent = inputTask.value;
 
-    task.addEventListener("click",function(){
-        task.classList.toggle("completed");
-    })
+//     task.addEventListener("click",function(){
+//         task.classList.toggle("completed");
+//     })
 
-    let deletebtn = document.createElement("button");
+//     let deletebtn = document.createElement("button");
 
-    deletebtn.textContent = "Delete";
+//     deletebtn.textContent = "Delete";
 
-    taskList.append(task);
-    task.append(deletebtn);
-    inputTask.value = "";
+//     taskList.append(task);
+//     task.append(deletebtn);
+//     inputTask.value = "";
 
-    deletebtn.addEventListener("click",function(){
-    event.stopPropagation();
-    task.remove();
+//     deletebtn.addEventListener("click",function(){
+//     event.stopPropagation();
+//     task.remove();
     
-    });
+//     });
 
-    event.preventDefault();
-    console.log("Form submit successful!");
+//     event.preventDefault();
+//     console.log("Form submit successful!");
+// });
+
+// function hasEmptyInput(){
+//     return inputTask.value === "";
+// }
+
+
+let nameInput = document.getElementById("nameInput");
+let result = document.getElementById("result");
+
+nameInput.addEventListener("keyup",function(){
+    result.textContent = nameInput.value;
 });
-
-function hasEmptyInput(){
-    return inputTask.value === "";
-}
-
