@@ -889,81 +889,244 @@ let passwordMessage = document.getElementById("passwordMessage");
 
 let submitBtn = document.getElementById("submitBtn");
 let result = document.getElementById("result");
+let tbody = document.getElementById("tableBody");
 
+let form = document.getElementById("registerForm");
+
+let editIndex = null;
+
+
+// Username Validation
 function checkUsername() {
-    if (username.value.length < 3) {
+
+    if(username.value.length < 3){
+
         usernameMessage.textContent = "Minimum 3 characters required";
         return false;
+
     }else{
+
         usernameMessage.textContent = "Username Valid";
         return true;
+
     }
+
 }
 
-function checkEmail() {
+
+// Email Validation
+function checkEmail(){
+
     let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+
     if(pattern.test(email.value)){
-        emailMessage.textContent = "Email valid";
+
+        emailMessage.textContent = "Email Valid";
         return true;
+
     }else{
-        emailMessage.textContent = "Invalid Email"
+
+        emailMessage.textContent = "Invalid Email";
         return false;
+
     }
+
 }
 
+
+// Password Validation
 function checkPassword(){
+
     let pattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%]).{8,}$/;
 
-    if (pattern.test(password.value)) {
-        passwordMessage.textContent = "Strong password!";
+
+    if(pattern.test(password.value)){
+
+        passwordMessage.textContent = "Strong Password";
         return true;
+
     }else{
-        passwordMessage.textContent = "Weak password!";
+
+        passwordMessage.textContent = "Weak Password";
         return false;
+
     }
+
 }
 
-function formValidation() {
+
+// Form Validation
+function formValidation(){
+
     let usernameValid = checkUsername();
     let emailValid = checkEmail();
     let passwordValid = checkPassword();
 
+
     if(usernameValid && emailValid && passwordValid){
+
         submitBtn.disabled = false;
+
     }else{
+
         submitBtn.disabled = true;
+
     }
+
 }
 
-username.addEventListener("input",formValidation);
-email.addEventListener("input",formValidation);
-password.addEventListener("input",formValidation);
 
-let form = document.getElementById("registerForm");
+username.addEventListener("input", formValidation);
+email.addEventListener("input", formValidation);
+password.addEventListener("input", formValidation);
 
-form.addEventListener("submit",function (event) {
+
+
+// Submit Form
+form.addEventListener("submit", function(event){
+
     event.preventDefault();
 
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+
     let userData = {
+
         username: username.value,
         email: email.value,
         password: password.value
+
+    };
+
+
+    // Add New User
+    if(editIndex === null){
+
+        users.push(userData);
+
+        result.textContent = "Registration Successful";
+
+
+    }
+    // Update Existing User
+    else{
+
+        users[editIndex] = userData;
+
+        result.textContent = "User Updated Successfully";
+
+        editIndex = null;
+
+        submitBtn.textContent = "Register";
+
     }
 
-    localStorage.setItem("user",JSON.stringify(userData))
 
-    result.textContent = "Registration Successful";
+    localStorage.setItem("users", JSON.stringify(users));
+
+
+    displayUsers();
+
     form.reset();
-    
-})
 
-let data = JSON.parse(localStorage.getItem("user"));
 
-if(data){
-    console.log(data.username);
+});
+
+
+
+// Display Users
+function displayUsers(){
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+
+    tbody.innerHTML = "";
+
+
+    users.forEach((user,index)=>{
+
+
+        tbody.innerHTML += `
+
+        <tr>
+
+            <td>${user.username}</td>
+
+            <td>${user.email}</td>
+
+
+            <td>
+                <button onclick="editUser(${index})">
+                    Edit
+                </button>
+
+                <button onclick="deleteUser(${index})">
+                    Delete
+                </button>
+            </td>
+
+
+        </tr>
+
+        `;
+
+
+    });
+
 }
-else{
-    console.log("No user data found");
+
+
+
+// Delete User
+function deleteUser(index){
+
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+
+    users.splice(index,1);
+
+
+    localStorage.setItem("users",JSON.stringify(users));
+
+
+    displayUsers();
+
+
 }
+
+
+
+// Edit User
+function editUser(index){
+
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+
+    let user = users[index];
+
+
+    username.value = user.username;
+
+    email.value = user.email;
+
+    password.value = user.password;
+
+
+    editIndex = index;
+
+
+    submitBtn.textContent = "Update";
+
+
+}
+
+
+
+// Page Load
+displayUsers();
+
 
